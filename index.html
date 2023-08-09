@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>It's me, Erdem!</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./snakeStyle.css">
+	<script src="https://kit.fontawesome.com/6316116050.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="text"></div>
+	<button class="fix">Fix AI</button>
+
+	<canvas class="canvas snake-canvas">Your Browser doesn't supper canvas.</canvas>	
+	<canvas class="canvas bird-canvas" width="900px" height="600px">Your browser does not support canvas element.</canvas>
+
+	<div class="home-container">
+		<div class="image-container">
+			<img src="./me.jpeg" alt="">
+		</div>
+
+		<div class="about-text-container">
+			<div class="about-text">
+				Hi, i'm <strong>Erdem</strong>. I was born in <strong>Bursa/Turkey</strong> in <strong>Sep 11 2005</strong>. I am currently majoring <strong>CENG</strong> at <strong title="Izmir Enstitute of Technology">IZTECH</strong>
+			</div>
+
+			<div class="about-contact">
+				<span class="contact-text">contact:</span>
+				<a href="mailto:erdemyilmazx@icloud.com" class="mail">erdemyilmazx@icloud.com</a>
+			</div>
+
+			<div class="about-links">
+				<a class="projects-btn">projects</a>
+				<a href="https://github.com/erdemylmaz" target="_blank" class="github-link link"><i class="fa-brands fa-github"></i></a>
+				<a href="https://x.com/erdemyilmazx" target="_blank" class="x-link link"><span>𝕏</span></a>
+				<a href="https://www.instagram.com/erdmylmazx/" target="_blank" class="instagram-link link"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="projects-container">
+		<div class="projects-header">Projects</div>
+
+		<div class="projects-warning">warning! most of my projects does not responsive for mobile.</div>
+
+		<div class="projects">
+		</div>
+
+		<a href="https://github.com/erdemylmaz?tab=repositories" target="" class="projects-footer">and more...</a>
+	</div>
+
+<script src="./birdAI.js"></script>
+<script src="./snake.js"></script>
+<script src="./projects.js"></script>
+</body>
+</html>

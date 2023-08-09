@@ -1,0 +1,251 @@
+:root {
+    /* purple */
+    --darkPurple: rgb(41, 0, 75);
+    --darkPurpleHover: rgb(61, 9, 104);
+    --purple: rgb(80, 27, 122);
+  
+    /* white */
+    --mainBackground: rgb(241, 243, 245);
+    --background: rgb(246, 246, 246);
+    --background2: #fafbfc;
+  
+    /* blue */
+    --darkBlue: #5271ff;
+    --darkBlueHover: #5271ff88;
+    --blueHover: rgb(10, 70, 228);
+    /* --blue: rgb(22, 82, 240); */
+    /* --blue: #2192FF; */
+    --darkBlue: #388FFF;
+    --blue: #1A71C2;
+    --blue2: #2f5dfb;
+    --lightBlue: rgb(0, 204, 255);
+  
+    /* orange */
+    /* --orange: rgb(255, 196, 0); */
+    --orange: #F08C01;
+    --darkorange: #ff7f2e;
+  
+    /* yellow */
+    --yellow: #ffeb4d;
+    --darkyellow: #feba2b;
+    /* red */
+    /* --red: #ff4631; */
+    --red: #E03132;
+  
+    /* green */
+    --pastelgreen: #1bb778;
+  
+    /* black */
+    --darkbackground: #1a1a1a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #232323;
+    color: #fff;
+}
+
+.home-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 256px;
+    height: 256px;
+    margin: auto 32px;
+}
+
+.about-text-container {
+    width: 512px;
+    height: 256px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 32px;
+    font-weight: 500;
+    color: #ddd;
+    line-height: 30px;
+}
+
+strong {
+    color: var(--blue);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px; /* 50% */
+    filter: opacity(0.8);
+}
+
+.about-links {
+    display: flex;
+    margin-top: 8px;
+    flex-direction: row;
+    height: 48px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about-text-container a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 24px;
+    margin: auto 8px;
+    transition: 250ms;
+}
+
+a i, a span {
+    font-size: 32px;
+}
+
+.about-text-container a:hover {
+    color: var(--blue);
+}
+
+
+.projects-container {
+    width: 1256px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-header {
+    height: 10vh;
+    width: 100%;
+    color: #aaa;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+}
+
+.projects {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.project {
+    width: 50vw;
+    min-height: 18vh;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.project-title {
+    height: 6vh;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-size: 32px;
+}
+
+.project-desc {
+    min-height: 6vh;
+    margin-top: 4px;
+}
+
+.project-footer {
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+}
+
+.project-link {
+    margin-top: 4px;
+    color: #aaa;
+    text-decoration: none;
+    margin: auto 8px;
+    transition: 250ms;
+}
+
+.project-github-link {
+    font-size: 24px;
+}
+
+.project-link:hover {
+    color: var(--blue);
+}
+
+.project {
+    margin-top: 24px;
+    transition: 500ms;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+.projects-btn {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.project-lang {
+    margin: auto 4px;
+    color: #aaa;
+    font-weight: 700;
+}
+
+.bird-canvas {
+    border: 1px solid #131313;
+}
+
+.snake-canvas {
+    border: 1px solid #232323;
+}
+
+.projects-warning {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.projects-footer {
+    margin-bottom: 24px;
+    color: #aaa;
+    font-weight: 700;
+}
+
+.about-contact a {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.about-contact a:hover {
+    text-decoration: underline;
+    color: #aaa;
+}
+
+.projects-footer:hover {
+    text-decoration: none;
+}
