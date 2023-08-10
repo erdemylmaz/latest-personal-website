@@ -249,3 +249,17 @@ a i, a span {
 .projects-footer:hover {
     text-decoration: none;
 }
+
+canvas {
+    position: absolute;
+    top: 16px;
+    z-index: -1000;
+}
+
+.fix, .text {
+    display: none;
+}
+
+canvas {
+    border-radius: 32px;
+}

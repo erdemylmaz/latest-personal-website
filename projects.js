@@ -36,6 +36,22 @@ class Projects {
             viewLink: 'https://erdemylmaz.github.io/clicker-game-v3/src/index.html',
             language: 'JavaScript',
         },
+
+        {
+            title: 'Crypto Game',
+            desc: 'simple crypto coin buy-sell game.',
+            githubLink: 'https://github.com/erdemylmaz/crypto-game',
+            viewLink: 'https://erdemylmaz.github.io/crypto-game/index.html',
+            language: 'JavaScript',
+        },
+
+        {
+            title: 'Reflex Game',
+            desc: 'it flashs out squares to screen and you need to click them as fast as you can.',
+            githubLink: 'https://github.com/erdemylmaz/reflex',
+            viewLink: 'https://erdemylmaz.github.io/reflex/index.html',
+            language: 'JavaScript',
+        },
     ];
 
     initProjects = () => {
