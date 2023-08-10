@@ -1,6 +1,7 @@
 const projectsArea = document.querySelector('.projects');
 const projectsBTN = document.querySelector(".projects-btn");
 const projectsDIV = document.querySelector('.projects-container');
+const goUpBtn = document.querySelector('.go-up-btn');
 
 class Projects {
     myProjects = [
@@ -12,6 +13,23 @@ class Projects {
             viewLink: 'https://erdemylmaz.github.io/talk-it/',
             language: 'JavaScript',
         },
+
+        {
+            title: 'Wordle',
+            desc: 'copy of original Wordle game. (try to find word.)',
+            githubLink: 'https://github.com/erdemylmaz/wordle',
+            viewLink: 'https://erdemylmaz.github.io/wordle/',
+            language: 'JavaScript',
+        },
+
+        {
+            title: 'Clicker Game',
+            desc: 'click to make cig kofte :) (with ranking system)',
+            githubLink: 'https://github.com/erdemylmaz/clicker-game-v3',
+            viewLink: 'https://erdemylmaz.github.io/clicker-game-v3/src/index.html',
+            language: 'JavaScript',
+        },
+
 
         {
             title: '(Fake) AI Car',
@@ -30,18 +48,10 @@ class Projects {
         },
 
         {
-            title: 'Clicker Game',
-            desc: 'click to make cig kofte :)',
-            githubLink: 'https://github.com/erdemylmaz/clicker-game-v3',
-            viewLink: 'https://erdemylmaz.github.io/clicker-game-v3/src/index.html',
-            language: 'JavaScript',
-        },
-
-        {
-            title: 'Crypto Game',
-            desc: 'simple crypto coin buy-sell game.',
-            githubLink: 'https://github.com/erdemylmaz/crypto-game',
-            viewLink: 'https://erdemylmaz.github.io/crypto-game/index.html',
+            title: 'Lession',
+            desc: 'detailed focus/efficiency helper web app. (not finished 100%)',
+            githubLink: 'https://github.com/erdemylmaz/lession',
+            viewLink: 'https://erdemylmaz.github.io/lession/index.html',
             language: 'JavaScript',
         },
 
@@ -52,6 +62,22 @@ class Projects {
             viewLink: 'https://erdemylmaz.github.io/reflex/index.html',
             language: 'JavaScript',
         },
+
+        {
+            title: 'Goblins Of Time',
+            desc: "a twitch subscriber event for twitch streamer 'Swaggybark'. this is my part of the event.",
+            githubLink: 'https://github.com/erdemylmaz/goblins-of-time',
+            viewLink: 'https://erdemylmaz.github.io/goblins-of-time/',
+            language: 'JavaScript',
+        },
+        {
+            title: 'Crypto Game',
+            desc: 'simple crypto coin buy-sell game.',
+            githubLink: 'https://github.com/erdemylmaz/crypto-game',
+            viewLink: 'https://erdemylmaz.github.io/crypto-game/index.html',
+            language: 'JavaScript',
+        },
+
     ];
 
     initProjects = () => {
@@ -68,8 +94,8 @@ class Projects {
                     </div>
 
                     <div class="project-links">
-                        <a target="_blank" href="${project.githubLink}" class="project-github-link project-link"><i class="fa-brands fa-github"></i></a>
                         <a target="_blank" href="${project.viewLink}" class="project-visit-link project-link">View</a>
+                        <a target="_blank" href="${project.githubLink}" class="project-github-link project-link"><i class="fa-brands fa-github"></i></a>
                     </div>
                 </div> 
             `;
@@ -107,6 +133,20 @@ function changeCanvas() {
         snakeCanvas.style.display = "flex";
     }
 }
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY != 0) {
+        goUpBtn.style.display = "flex";
+    } else {
+        goUpBtn.style.display = "none";
+    }
+});
+
+goUpBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+    });
+});
 
 changeCanvas();
 

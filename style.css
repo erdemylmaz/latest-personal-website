@@ -263,3 +263,51 @@ canvas {
 canvas {
     border-radius: 32px;
 }
+
+.warning {
+    font-weight: 800;
+}
+
+.go-up-btn {
+    width: 48px;
+    height: 48px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 24px;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.go-up-btn i {
+    animation: goUpAnimation 4.5s ease-in-out infinite;
+}
+
+.go-up-btn:hover {
+    color: #fff;
+    background-color: var(--blue);
+}
+
+@keyframes goUpAnimation {
+    25% {
+        transform: translateY(-6px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
