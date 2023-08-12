@@ -2,9 +2,11 @@
 const canvasElement = document.querySelector(".bird-canvas");
 const ctx = canvasElement.getContext("2d");
 
+
 // js
 class Canvas {
   width = 1084;
+  // width= 200;
   height = window.innerHeight * 0.9 - 16;
   bgColor = "#232323";
   FPS = 240;
@@ -28,8 +30,20 @@ class Pipes {
 
   createPipe = () => {
     let randomHeight = Math.floor(
-      Math.random() * canvas.height - this.pipeSpaceHeight
+      Math.random() * canvas.height
     );
+
+    if(randomHeight < this.pipeSpaceHeight) {
+      randomHeight += this.pipeSpaceHeight;
+    }
+
+    if(randomHeight > this.pipeSpaceHeight) {
+      randomHeight -= this.pipeSpaceHeight;
+    }
+
+    if(randomHeight > canvas.height - this.pipeSpaceHeight) {
+      randomHeight -= this.pipeSpaceHeight;
+    }
 
     let pipe = {
       index: this.pipes.length,
@@ -158,6 +172,15 @@ const canvas = new Canvas();
 const pipes = new Pipes();
 const bird = new Bird();
 const ai = new AI();
+
+let deviceWidth = window.innerWidth;
+
+if(deviceWidth < 1084) {
+  canvas.width = deviceWidth * 0.9;
+  canvasElement.width = deviceWidth * 0.9;
+  canvas.height = window.innerHeight;
+  canvasElement.style.filter = "brightness(0.8)";
+}
 
 // draw bird
 ctx.fillStyle = bird.color;

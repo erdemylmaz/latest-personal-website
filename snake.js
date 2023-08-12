@@ -202,6 +202,16 @@ const snake = new Snake();
 const apple = new Apple();
 const aiSnake = new AISnake();
 
+if(deviceWidth < 1084) {
+  canvasDIV.width = deviceWidth * 0.9;
+  canvasSnake.width = deviceWidth * 0.9;
+  canvasSnake.height = window.innerHeight;
+  canvasDIV.style.filter = "brightness(0.8)";
+
+  snake.width = 18;
+  apple.width = 18;
+}
+
 setInterval(aiSnake.makeDecide, 1000 / 30); // 1000 / 30
 fixBtn.addEventListener("click", aiSnake.fixAI);
 

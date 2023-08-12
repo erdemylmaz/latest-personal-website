@@ -122,16 +122,22 @@ projectsBTN.addEventListener('click', projects.scrollToProjects);
 const birdCanvas = document.querySelector('.bird-canvas');
 const snakeCanvas = document.querySelector('.snake-canvas');
 
+let lastNumber = null;
 function changeCanvas() {
     let number = Math.round(Math.random());
 
     if(number == 1) {
+        if(lastNumber == 0) {
+            canvas.restart();
+        }
         birdCanvas.style.display = "flex";
         snakeCanvas.style.display = "none";
     } else {
         birdCanvas.style.display = "none" ;
         snakeCanvas.style.display = "flex";
     }
+
+    lastNumber = number;
 }
 
 window.addEventListener('scroll', () => {
