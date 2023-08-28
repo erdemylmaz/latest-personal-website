@@ -81,7 +81,7 @@ class Projects {
     ];
 
     initProjects = () => {
-        this.myProjects.map((project) => {
+        this.myProjects.map((project, index) => {
             let div = document.createElement('div');
             div.className = "project";
 
@@ -101,14 +101,33 @@ class Projects {
             `;
 
             projectsArea.appendChild(div);
-
-        })
+        });
     }
 
-    scrollToProjects = () => {
+    scrollToProjects = () => { 
         let top = projectsDIV.offsetTop;
         window.scrollTo({
             top: top,
+        });
+    }
+
+    scroll = () => {
+        let currentBottomY = window.scrollY + window.innerHeight;
+        let projects = document.querySelectorAll('.project');
+
+        projects.forEach((p, index) => {
+            let projectsTop = p.offsetTop;
+            if(currentBottomY > projectsTop + 96) {
+                p.style.transform = "translateX(0px)";
+                p.style.filter = "opacity(1)";
+            } else if (currentBottomY < (projectsTop + 512)){
+                p.style.filter = "opacity(0)";
+                if((index % 2) == 0) {
+                    p.style.transform = "translateX(256px)";
+                } else {
+                    p.style.transform = "translateX(-256px)";
+                }
+            }
         });
     }
 }
@@ -141,7 +160,7 @@ function changeCanvas() {
 }
 
 window.addEventListener('scroll', () => {
-    if(window.scrollY != 0) {
+    if(window.scrollY > 16) {
         goUpBtn.style.display = "flex";
     } else {
         goUpBtn.style.display = "none";
@@ -159,3 +178,5 @@ changeCanvas();
 setInterval(() => {
     changeCanvas();
 }, 30000);
+
+window.addEventListener('scroll', projects.scroll);

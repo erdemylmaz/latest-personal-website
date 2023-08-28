@@ -7,7 +7,7 @@ const fixBtn = document.querySelector(".fix");
 class CanvasSnake {
   width = 1084;
   height = window.innerHeight * 0.9 - 16;
-  bgColor = "#202020";
+  bgColor = "#000";
 }
 
 class Snake {
@@ -205,7 +205,7 @@ const aiSnake = new AISnake();
 if(deviceWidth < 1084) {
   canvasDIV.width = deviceWidth * 0.9;
   canvasSnake.width = deviceWidth * 0.9;
-  canvasSnake.height = window.innerHeight;
+  canvasSnake.height = window.innerHeight * 0.9;
   canvasDIV.style.filter = "brightness(0.8)";
 
   snake.width = 18;
