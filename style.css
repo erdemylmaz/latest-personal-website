@@ -502,7 +502,7 @@ canvas {
     .education-container {
         width: 100%;
         height: 200vh;
-        display: flex;
+        display: none;
         justify-content: flex-start;
     }
 
