@@ -7,7 +7,7 @@ class Projects {
     myProjects = [
         {
             title: 'IYTE Ulaşım',
-            desc: 'public transportation times helper for students @ iztech",
+            desc: 'public transportation times helper for students @ iztech',
             githubLink: 'https://github.com/erdemylmaz/iyte-ulasim',
             // viewLink: 'http://talkitsozluk.com',
             viewLink: 'https://iyteulasim.com',
