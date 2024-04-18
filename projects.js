@@ -6,6 +6,14 @@ const goUpBtn = document.querySelector('.go-up-btn');
 class Projects {
     myProjects = [
         {
+            title: 'IYTE Ulaşım',
+            desc: 'public transportation times helper for students @ iztech",
+            githubLink: 'https://github.com/erdemylmaz/iyte-ulasim',
+            // viewLink: 'http://talkitsozluk.com',
+            viewLink: 'https://iyteulasim.com',
+            language: 'JavaScript',
+        },
+        {
             title: 'talk it!',
             desc: 'talking platform for high school students. mostly targeting YKS (exam) students.',
             githubLink: 'https://github.com/erdemylmaz/talk-it',
