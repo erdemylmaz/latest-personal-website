@@ -14,6 +14,13 @@ class Projects {
             language: 'JavaScript',
         },
         {
+            title: "Path Finding Algorithm Visualisation",
+            desc: "visualised path finding algorithm using heuristics to find best (shortest) path."
+            githubLink: "https://github.com/erdemylmaz/path-finding",
+            viewLink: "https://erdemylmaz.github.io/path-finding/",
+            language: "JavaScript",
+        },
+        {
             title: 'talk it!',
             desc: 'talking platform for high school students. mostly targeting YKS (exam) students.',
             githubLink: 'https://github.com/erdemylmaz/talk-it',
