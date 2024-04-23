@@ -15,7 +15,7 @@ class Projects {
         },
         {
             title: "Path Finding Algorithm Visualisation",
-            desc: "visualised path finding algorithm using heuristics to find best (shortest) path."
+            desc: "visualised path finding algorithm using heuristics to find best (shortest) path.",
             githubLink: "https://github.com/erdemylmaz/path-finding",
             viewLink: "https://erdemylmaz.github.io/path-finding/",
             language: "JavaScript",
